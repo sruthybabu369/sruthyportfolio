@@ -1,0 +1,66 @@
+/* About Section - Stylish Modern Layout */
+.about-section {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #000000 0%, #222222 100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Flex container for side-by-side layout */
+  .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 90%;
+    gap: 40px;
+  }
+  
+  /* Profile Image Styling */
+  .about-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    transition: transform 0.3s ease;
+  }
+  
+  .about-image img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Text Content Styling */
+  .about-content {
+    max-width: 550px;
+  }
+  
+  .about-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #00d4ff, #00ff88);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .about-title span {
+    color: #00ff88;
+  }
+  
+  /* Text Paragraphs */
+  .about-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    opacity: 0.9;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .about-content p:hover {
+    color: #00d4ff;
+  }
+  

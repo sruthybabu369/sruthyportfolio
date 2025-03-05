@@ -1,0 +1,75 @@
+/* Hero Section Styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure the body and html take full width */
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+.hero-section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #000000 0%, #222222 100%);
+  color: white;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+}
+
+.hero-title {
+  font-size: 3.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #00d4ff, #00ff88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero-subtitle {
+  font-size: 1.7rem;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 198, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-button:hover {
+  background: linear-gradient(45deg, #0072ff, #00d4ff);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 198, 255, 0.6);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
