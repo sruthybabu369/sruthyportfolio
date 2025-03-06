@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
+import Services from "./components/Services";
 import Skills from "./components/Skills";
 import HireMe from "./components/HireMe";
 import About from "./components/About";
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <About />
       <Projects />
+      <Services />
       <Skills />
       <HireMe />
       <Contact />

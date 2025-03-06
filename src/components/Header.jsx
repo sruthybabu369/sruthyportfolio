@@ -20,7 +20,9 @@ const Header = () => {
     <header className="header">
       {/* Navigation Links */}
       <nav className="nav">
+        <a href="#home" className="nav-link">Home</a>
         <a href="#about" className="nav-link">About</a>
+        <a href="#services" className="nav-link">Services</a>
         <a href="#projects" className="nav-link">Projects</a>
         <a href="#skills" className="nav-link">Skills</a>
         <a href="#contact" className="nav-link">Contact</a>
@@ -32,8 +34,6 @@ const Header = () => {
       </a>
     </header>
   );
-  
-   
 };
 
 export default Header;

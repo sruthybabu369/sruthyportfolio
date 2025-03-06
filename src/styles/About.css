@@ -1,7 +1,7 @@
 /* About Section - Stylish Modern Layout */
 .about-section {
     padding: 100px 20px;
-    background: linear-gradient(135deg, #000000 0%, #222222 100%);
+    
     color: white;
     display: flex;
     justify-content: center;
