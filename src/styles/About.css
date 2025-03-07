@@ -1,66 +1,96 @@
-/* About Section - Stylish Modern Layout */
+/* About Section - Cool Glassmorphism Effect */
 .about-section {
-    padding: 100px 20px;
-    
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Same as Hero Section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glassmorphism Container */
+.about-container {
+  max-width: 850px;
+  width: 90%;
+  text-align: center;
+  padding: 60px;
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
   
-  /* Flex container for side-by-side layout */
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Floating effect on hover */
+.about-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* About Title */
+.about-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #00d4ff, #00ff88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Content Styling */
+.about-description,
+.about-highlight,
+.about-footer {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  opacity: 0.9;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Cool Glow Effect */
+.about-footer .glow-text {
+  color: #00ff88;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.7);
+}
+
+/* Stylish Underline Animation */
+.about-highlight {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  cursor: pointer;
+}
+
+.about-highlight::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #00ff88;
+  transition: width 0.3s ease-in-out;
+  margin: auto;
+}
+
+.about-highlight:hover::after {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .about-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1000px;
-    width: 90%;
-    gap: 40px;
+    width: 95%;
+    padding: 40px;
   }
-  
-  /* Profile Image Styling */
-  .about-image img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid white;
-    transition: transform 0.3s ease;
-  }
-  
-  .about-image img:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Text Content Styling */
-  .about-content {
-    max-width: 550px;
-  }
-  
+
   .about-title {
-    font-size: 2.8rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    background: linear-gradient(90deg, #00d4ff, #00ff88);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
   }
-  
-  .about-title span {
-    color: #00ff88;
-  }
-  
-  /* Text Paragraphs */
-  .about-content p {
+
+  .about-description,
+  .about-highlight,
+  .about-footer {
     font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    opacity: 0.9;
-    transition: color 0.3s ease-in-out;
   }
-  
-  .about-content p:hover {
-    color: #00d4ff;
-  }
-  
+}
+
