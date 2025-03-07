@@ -1,37 +1,34 @@
-import React from "react";
+import React from "react"; 
 import "../styles/Hero.css"; 
-// Importing the separate CSS file
 import { motion } from "framer-motion";
+import profileImg from "../assets/sruthy_img.png"; // Update with your actual image path
 
 const Hero = () => {
   return (
     <section id="home" className="hero-section">
-      <motion.h1 
-        className="hero-title"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        Hi, I'm Sruthy C B
-      </motion.h1>
-      
-      <motion.p 
-        className="hero-subtitle"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.5 }}
-      >
-        A Full-Stack Developer specializing in React & Django
-      </motion.p>
+      <div className="hero-container">
+        {/* Left side - Profile Image */}
+        <motion.div 
+          className="hero-image"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <img src={profileImg} alt="Sruthy C B" />
+        </motion.div>
 
-      <motion.a 
-        href="#projects" 
-        className="hero-button"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        View My Work
-      </motion.a>
+        {/* Right side - Job Titles */}
+        <motion.div 
+          className="hero-content"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <h1 className="hero-title">Hi, I'm Sruthy C B</h1>
+          <p className="hero-subtitle">A Full-Stack Developer specializing in React & Django</p>
+          <a href="#projects" className="hero-button">View My Work</a>
+        </motion.div>
+      </div>
     </section>
   );
 };
