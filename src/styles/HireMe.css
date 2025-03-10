@@ -1,68 +1,61 @@
-/* Hire Me Section */
+/* Hire Me Section - Glassmorphism Style */
 #hire-me {
-    position: relative;
-    overflow: hidden;
-    padding: 120px 20px;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Matching Other Sections */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    color: white;
+}
+
+.hire-me-container {
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    
+    padding: 50px;
+    max-width: 700px;
     
 }
 
-/* Subtle Animated Background Effect */
-#hire-me::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    
-    animation: moveGlow 6s linear infinite;
-    z-index: -1;
-}
-
-/* Moving Glow Animation */
-@keyframes moveGlow {
-    0% {
-        transform: translate(0, 0);
-    }
-    50% {
-        transform: translate(20%, 20%);
-    }
-    100% {
-        transform: translate(0, 0);
-    }
-}
-
-/* Section Heading */
-#hire-me h2 {
+.hire-me-title {
     font-size: 3rem;
     font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #00d4ff, #00ff88);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* Description Text */
-#hire-me p {
+.hire-me-title:hover {
+    transform: scale(1.1);
+    text-shadow: 0px 0px 20px rgba(0, 255, 136, 0.8);
+}
+
+.hire-me-text {
     font-size: 1.3rem;
-    margin-bottom: 30px;
-    opacity: 0.8;
+    opacity: 0.9;
+    margin-bottom: 20px;
+    color: white;
 }
 
-/* Call-to-Action Button */
-#hire-me a {
+.hire-me-button {
     display: inline-block;
-    background: #ff7eb3;
-    color: white;
+    background: #00ff88;
+    color: black;
     padding: 14px 28px;
     border-radius: 8px;
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border: 2px solid #00ff88;
 }
 
-/* Button Hover Effect */
-#hire-me a:hover {
-    background: #ff758c;
-    transform: scale(1.1);
+.hire-me-button:hover {
+    background: transparent;
+    color: #00ff88;
+    transform: scale(1.05);
 }

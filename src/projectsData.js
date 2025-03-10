@@ -23,6 +23,30 @@ const projects = [
       github: "https://github.com/yourusername/citytours",
       liveDemo: "https://citytours.com",
     },
+    {
+      id: 4,
+      title: "City Tours",
+      description: "A React-based travel website showcasing different city tours.",
+      techStack: ["React", "CSS", "JavaScript"],
+      github: "https://github.com/yourusername/citytours",
+      liveDemo: "https://citytours.com",
+    },
+    {
+      id: 5,
+      title: "City Tours",
+      description: "A React-based travel website showcasing different city tours.",
+      techStack: ["React", "CSS", "JavaScript"],
+      github: "https://github.com/yourusername/citytours",
+      liveDemo: "https://citytours.com",
+    },
+    {
+      id: 6,
+      title: "City Tours",
+      description: "A React-based travel website showcasing different city tours.",
+      techStack: ["React", "CSS", "JavaScript"],
+      github: "https://github.com/yourusername/citytours",
+      liveDemo: "https://citytours.com",
+    },
   ];
   
   export default projects;

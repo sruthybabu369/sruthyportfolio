@@ -12,29 +12,29 @@ const skills = [
   { icon: <FaReact />, name: "React.js" },
   { icon: <FaJs />, name: "JavaScript" },
   { icon: <FaServer />, name: "Django" },
-  { icon: <FaBootstrap />, name: "Bootstrap" },  
-  { icon: <SiJquery />, name: "jQuery" },  
+  { icon: <FaBootstrap />, name: "Bootstrap" },
+  { icon: <SiJquery />, name: "jQuery" },
   { icon: <FaDatabase />, name: "SQL / PostgreSQL" },
   { icon: <FaGitAlt />, name: "Git" },
   { icon: <FaCogs />, name: "REST API" },
-  { icon: <FaCloud />, name: "Cloud Platforms" },  
+  { icon: <FaCloud />, name: "Cloud Platforms" },
   { icon: <SiNetlify />, name: "Netlify" }
 ];
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-secondary text-center">
-      <h2 className="text-4xl font-semibold mb-10 text-primary transition-transform transform hover:scale-105">My Skills</h2>
+    <section id="skills" className="skills-section">
+      <h2 className="skills-heading">My Skills</h2>
       
-      {/* Updated Grid System */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      <div className="skills-grid">
         {skills.map((skill, index) => (
           <motion.div
             key={index}
-            className="skill-card flex flex-col items-center justify-center p-6 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            className="skill-card"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1, duration: 0.6 }}
+            viewport={{ once: true }}
           >
             <div className="skill-icon">{skill.icon}</div>
             <h3 className="skill-name">{skill.name}</h3>

@@ -1,138 +1,141 @@
-/* 🔥 Projects Section - Modern Stylish Look 🔥 */
+/* 🔥 Projects Section - Glassmorphism Style 🔥 */
 .projects-section {
-    padding: 100px 20px;
-    
-    color: white;
-    text-align: center;
-  }
-  
-  /* 🎨 Title Styling */
-  .projects-title {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 50px;
-    text-transform: uppercase;
-    background: linear-gradient(90deg, #ff6f61, #ffcc00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-    cursor: pointer;
-    transition: transform 0.3s ease, text-shadow 0.3s ease;
-  }
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Matching About & Home Section */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
-  .projects-title:hover {
-    transform: scale(1.1); /* Slight zoom effect */
-    text-shadow: 0px 0px 20px rgba(255, 204, 0, 0.8);
-    animation: bounce 0.4s ease-in-out;
-  }
-  
-  /* 🔄 Bounce Keyframes */
-  @keyframes bounce {
-    0%, 100% { transform: scale(1.1) translateY(0); }
-    50% { transform: scale(1.15) translateY(-5px); }
-  }
-  
-  .projects-title span {
-    color: #ffcc00;
-  }
-  
-  /* 🖼️ Projects Grid */
+/* 🎨 Title Styling */
+.projects-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #00d4ff, #00ff88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.projects-title:hover {
+  transform: scale(1.1);
+  text-shadow: 0px 0px 20px rgba(0, 255, 136, 0.8);
+  animation: bounce 0.4s ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: scale(1.1) translateY(0); }
+  50% { transform: scale(1.15) translateY(-5px); }
+}
+
+/* 🖼️ Projects Grid */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 🎭 Project Cards with Glassmorphism */
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 25px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.project-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* 🏆 Project Image */
+.project-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* 📝 Project Content */
+.project-content h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #00ff88;
+}
+
+.project-content p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.tech-stack {
+  font-size: 0.9rem;
+  color: #00ff88;
+  margin-bottom: 15px;
+}
+
+/* 🔗 Links Styling */
+.project-links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+/* 🚀 GitHub & Live Demo Buttons */
+.github-link, .live-demo-link {
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px 18px;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.github-link {
+  background: #00d4ff;
+  color: white;
+  border: 2px solid #00d4ff;
+}
+
+.github-link:hover {
+  background: transparent;
+  color: #00d4ff;
+  transform: scale(1.05);
+}
+
+.live-demo-link {
+  background: #00ff88;
+  color: black;
+  border: 2px solid #00ff88;
+}
+
+.live-demo-link:hover {
+  background: transparent;
+  color: #00ff88;
+  transform: scale(1.05);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
   .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
-  
-  /* 🎭 Project Cards */
-  .project-card {
-    background: #1a1a1a;
-    padding: 20px;
-    border-radius: 15px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.1);
-    overflow: hidden;
-    position: relative;
+  .projects-title {
+      font-size: 2.5rem;
   }
-  
-  /* 🏆 Cool Hover Effect */
-  .project-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0px 15px 30px rgba(255, 255, 255, 0.2);
-    background: linear-gradient(135deg, #222 0%, #333 100%);
-  }
-  
-  /* 🎯 Project Image */
-  .project-image img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
-  }
-  
-  /* 📝 Project Content */
-  .project-content h3 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .project-content p {
-    font-size: 1rem;
-    opacity: 0.9;
-    margin-bottom: 10px;
-  }
-  
-  /* 🛠️ Tech Stack */
-  .tech-stack {
-    font-size: 0.9rem;
-    color: #ffcc00;
-    margin-bottom: 15px;
-  }
-  
-  /* 🔗 Links Styling */
-  .project-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-  }
-  
-  /* 🚀 GitHub & Live Demo Buttons */
-  .github-link, .live-demo-link {
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 10px 18px;
-    border-radius: 5px;
-    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
-    font-weight: bold;
-    display: inline-block;
-  }
-  
-  /* GitHub Button */
-  .github-link {
-    background: #ff6f61;
-    color: white;
-    border: 2px solid #ff6f61;
-  }
-  
-  .github-link:hover {
-    background: transparent;
-    color: #ff6f61;
-    transform: scale(1.05);
-  }
-  
-  /* Live Demo Button */
-  .live-demo-link {
-    background: #ffcc00;
-    color: black;
-    border: 2px solid #ffcc00;
-  }
-  
-  .live-demo-link:hover {
-    background: transparent;
-    color: #ffcc00;
-    transform: scale(1.05);
-  }
-  
+}
