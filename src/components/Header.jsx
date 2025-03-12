@@ -22,14 +22,15 @@ const Header = () => {
       <nav className="nav">
         <a href="#home" className="nav-link">Home</a>
         <a href="#about" className="nav-link">About</a>
-        <a href="#services" className="nav-link">Services</a>
+        
         <a href="#projects" className="nav-link">Projects</a>
+        <a href="#services" className="nav-link">Services</a>
         <a href="#skills" className="nav-link">Skills</a>
         <a href="#contact" className="nav-link">Contact</a>
       </nav>
 
       {/* Resume Button (Moved to the right) */}
-      <a href="/Sruthy_Resume.pdf" download="Sruthy_Resume.pdf" className="resume-btn">
+      <a href="/Sruthy (2).pdf" download="Sruthy (2).pdf" className="resume-btn">
         Download Resume
       </a>
     </header>

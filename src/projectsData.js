@@ -1,6 +1,11 @@
+import ecounityImage from './assets/ecounity_imgg.png';
+import infobitesimage from './assets/infobites_img.png';
+import Todoimage from './assets/todo_img.png';
+
 const projects = [
     {
       id: 1,
+      image: ecounityImage,
       title: "EcoUnity",
       description: "An environmental awareness platform built with Django and React.",
       techStack: ["React", "Django", "PostgreSQL"],
@@ -17,7 +22,8 @@ const projects = [
     },
     {
       id: 3,
-      title: "City Tours",
+      image: infobitesimage,
+      title: "InfoBites",
       description: "A React-based travel website showcasing different city tours.",
       techStack: ["React", "CSS", "JavaScript"],
       github: "https://github.com/yourusername/citytours",
@@ -25,7 +31,8 @@ const projects = [
     },
     {
       id: 4,
-      title: "City Tours",
+      image: Todoimage,
+      title: "To-Do Planner",
       description: "A React-based travel website showcasing different city tours.",
       techStack: ["React", "CSS", "JavaScript"],
       github: "https://github.com/yourusername/citytours",

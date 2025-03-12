@@ -48,7 +48,7 @@
 .input-group textarea {
     width: 100%;
     padding: 12px;
-    border: 2px solid #00d4ff;
+    border: 2px solid #0b4754;
     border-radius: 8px;
     font-size: 1rem;
     background: rgba(255, 255, 255, 0.848);
@@ -58,7 +58,7 @@
 
 .input-group input:focus,
 .input-group textarea:focus {
-    border-color: #00ff88;
+    border-color: #0d3824;
     outline: none;
 }
 
