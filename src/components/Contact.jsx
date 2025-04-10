@@ -56,10 +56,10 @@ const Contact = () => {
       <div className="social-links">
         <h3>Connect with me</h3>
         <div className="icons">
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/sruthybabu369" target="_blank" rel="noopener noreferrer">
             <FaGithub />
           </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/sruthy-c-b-557313222/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin />
           </a>
           <a href="mailto:sruthycb0@gmail.com">

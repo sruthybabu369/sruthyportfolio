@@ -10,17 +10,17 @@ const Services = () => {
         <div className="service-card">
           <FaCode className="service-icon" />
           <h3>Web Development</h3>
-          <p>Building responsive and dynamic websites using modern technologies.</p>
+          <p>Building fully responsive websites with clean, semantic, and optimized code.</p>
         </div>
         <div className="service-card">
           <FaPaintBrush className="service-icon" />
           <h3>UI/UX Design</h3>
-          <p>Crafting visually appealing and user-friendly interfaces.</p>
+          <p>Crafting visually engaging and user-friendly interfaces.</p>
         </div>
         <div className="service-card">
           <FaSearch className="service-icon" />
-          <h3>SEO Optimization</h3>
-          <p>Enhancing website visibility with strategic SEO techniques.</p>
+          <h3>Frontend Development</h3>
+          <p>Creating user-focused, scalable frontend solutions with smooth interactions and optimized performance</p>
         </div>
       </div>
     </section>

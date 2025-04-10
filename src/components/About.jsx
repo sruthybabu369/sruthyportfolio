@@ -7,11 +7,10 @@ const About = () => {
       <div className="about-container">
         <h2 className="about-title">About <span>Me</span></h2>
         <p className="about-description">
-          Hi! I'm <strong>Sruthy</strong>, a passionate <strong>Full-Stack Web Developer </strong> 
-          with expertise in <strong>React, Django, JavaScript, Python, and PostgreSQL</strong>.
+          Hi! I'm <strong>Sruthy</strong>, a dedicated <strong>Full-Stack Web Developer</strong> who enjoys crafting clean, functional, and modern web solutions that deliver real impact.
         </p>
         <p className="about-highlight">
-          I love building stunning, functional websites and crafting seamless user experiences.
+          I’m always learning, evolving, and exploring new ways to push the boundaries of what the web can do.
         </p>
         <p className="about-footer">
           Let's create something <span className="glow-text">amazing</span> together! 
