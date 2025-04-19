@@ -1,6 +1,8 @@
 import ecounityImage from './assets/ecounity_imgg.png';
 import infobitesimage from './assets/infobites_img.png';
 import Todoimage from './assets/todo_img.png';
+import Bigmartimage from './assets/bigmart_img.png';
+import Restaurantsysimage from './assets/rmspic3.png';
 
 const projects = [
     {
@@ -14,11 +16,11 @@ const projects = [
     },
     {
       id: 2,
+      image: Bigmartimage,
       title: "Bigmart",
       description: "A full-featured e-commerce website with user authentication and payment integration.",
       techStack: ["Django", "HTML", "CSS", "Bootstrap", "PostgreSQL"],
       github: "https://github.com/yourusername/bigmart",
-      liveDemo: "https://bigmart.com",
     },
     {
       id: 3,
@@ -40,7 +42,8 @@ const projects = [
     },
     {
       id: 5,
-      title: "City Tours",
+      image: Restaurantsysimage,
+      title: "Restaurant Management System",
       description: "A React-based travel website showcasing different city tours.",
       techStack: ["React", "CSS", "JavaScript"],
       github: "https://github.com/yourusername/citytours",
@@ -48,7 +51,7 @@ const projects = [
     },
     {
       id: 6,
-      title: "City Tours",
+      title: "BookTrail",
       description: "A React-based travel website showcasing different city tours.",
       techStack: ["React", "CSS", "JavaScript"],
       github: "https://github.com/yourusername/citytours",

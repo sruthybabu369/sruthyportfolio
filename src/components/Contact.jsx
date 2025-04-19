@@ -3,56 +3,110 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import "../styles/Contact.css";
 
 const Contact = () => {
-  const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
 
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
+    setFormData({ 
+      ...formData, 
+      [e.target.name]: e.target.value 
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setSubmitted(true);
-      setLoading(false);
-    }, 2000); // Simulate form submission delay
+
+    const response = await fetch("https://formsubmit.co/ajax/sruthycb0@gmail.com", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: "application/json"
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        _captcha: false
+      })
+    });
+
+    const result = await response.json();
+
+    if (result.success === "true") {
+      setFormData({ name: "", email: "", message: "" });
+      setShowModal(true); // show modal
+    }
+
+    setLoading(false);
   };
 
   return (
     <section id="contact" className="contact-section">
       <h2 className="contact-title">Contact Me</h2>
 
-      {!submitted ? (
-        <form 
-          action="https://formsubmit.co/sruthycb0@gmail.com" 
-          method="POST" 
-          className="contact-form"
-          onSubmit={handleSubmit}
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <div className="input-group">
+          <label>Name</label>
+          <input 
+            type="text" 
+            name="name" 
+            placeholder="Your Name" 
+            required 
+            value={formData.name}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="input-group">
+          <label>Email</label>
+          <input 
+            type="email" 
+            name="email" 
+            placeholder="Your Email" 
+            required 
+            value={formData.email}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="input-group">
+          <label>Message</label>
+          <textarea 
+            name="message" 
+            placeholder="Your Message" 
+            rows="4" 
+            required 
+            value={formData.message}
+            onChange={handleChange}
+          ></textarea>
+        </div>
+
+        <button 
+          type="submit" 
+          className={`contact-button ${loading ? "loading" : ""}`} 
+          disabled={loading}
         >
-          <input type="hidden" name="_captcha" value="false" />
+          {loading ? "Sending..." : "Send Message"}
+        </button>
+      </form>
 
-          <div className="input-group">
-            <label>Name</label>
-            <input type="text" name="name" placeholder="Your Name" required />
+      {/* Success Modal */}
+      {showModal && (
+        <div className="success-modal">
+          <div className="modal-content">
+            <span className="close-btn" onClick={() => setShowModal(false)}>&times;</span>
+            <h3>✅ Message Sent!</h3>
+            <p>Your message has been delivered successfully.</p>
           </div>
-
-          <div className="input-group">
-            <label>Email</label>
-            <input type="email" name="email" placeholder="Your Email" required />
-          </div>
-
-          <div className="input-group">
-            <label>Message</label>
-            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-          </div>
-
-          <button type="submit" className={`contact-button ${loading ? "loading" : ""}`} disabled={loading}>
-            {loading ? "Sending..." : "Send Message"}
-          </button>
-        </form>
-      ) : (
-        <div className="success-message">
-          ✅ Thank you! Looking forward to connecting. ✨
         </div>
       )}
 
-      {/* Social Media Links */}
       <div className="social-links">
         <h3>Connect with me</h3>
         <div className="icons">

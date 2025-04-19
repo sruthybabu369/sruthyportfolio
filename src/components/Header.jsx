@@ -30,7 +30,7 @@ const Header = () => {
       </nav>
 
       {/* Resume Button (Moved to the right) */}
-      <a href="/Sruthy (2).pdf" download="Sruthy (2).pdf" className="resume-btn">
+      <a href="/sruthycb_resume.pdf" download="sruthycb_resume.pdf" className="resume-btn">
         Download Resume
       </a>
     </header>

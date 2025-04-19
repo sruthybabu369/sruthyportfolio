@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/services.css";
-import { FaCode, FaPaintBrush, FaSearch } from "react-icons/fa";
+import { FaCode, FaPaintBrush, FaLaptopCode } from "react-icons/fa";
 
 const Services = () => {
   return (
@@ -18,7 +18,7 @@ const Services = () => {
           <p>Crafting visually engaging and user-friendly interfaces.</p>
         </div>
         <div className="service-card">
-          <FaSearch className="service-icon" />
+          <FaLaptopCode className="service-icon" />
           <h3>Frontend Development</h3>
           <p>Creating user-focused, scalable frontend solutions with smooth interactions and optimized performance</p>
         </div>
