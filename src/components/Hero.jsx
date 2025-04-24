@@ -17,6 +17,9 @@ const Hero = () => {
           <img src={profileImg} alt="Sruthy C B" />
         </motion.div>
 
+        {/* Divider */}
+        <div className="vertical-divider" />
+        
         {/* Right side - Job Titles */}
         <motion.div 
           className="hero-content"
