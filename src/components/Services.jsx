@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/services.css";
+import "../styles/Services.css";
 import { FaCode, FaPaintBrush, FaLaptopCode } from "react-icons/fa";
 
 const Services = () => {
