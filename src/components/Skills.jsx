@@ -1,6 +1,6 @@
 import React from "react";
 import { FaPython, FaHtml5, FaCss3Alt, FaReact, FaJs, FaServer, FaBootstrap, FaDatabase, FaGitAlt, FaCloud } from "react-icons/fa";
-import { SiJquery, SiNetlify } from "react-icons/si";
+import { SiJquery, SiNetlify, SiFigma } from "react-icons/si";
 import { FaCogs } from "react-icons/fa";
 import { motion } from "framer-motion";
 import "../styles/Skills.css";
@@ -10,6 +10,7 @@ const skills = [
   { icon: <FaHtml5 />, name: "HTML5" },
   { icon: <FaCss3Alt />, name: "CSS3" },
   { icon: <FaReact />, name: "React.js" },
+  { icon: <SiFigma />, name: "Figma" },
   { icon: <FaJs />, name: "JavaScript" },
   { icon: <FaServer />, name: "Django" },
   { icon: <FaBootstrap />, name: "Bootstrap" },
